@@ -1,0 +1,21 @@
+  modules:
+    macro:
+      - key: imgur-gallery-macro
+        function: main
+        title: Imgur Gallery Viewer
+        description: View hot images from Imgur in Confluence.
+    function:
+      - key: main
+        handler: index.run
+  app:
+    id: ari:cloud:ecosystem::app/30a4ff29-f3dd-4a22-bab8-b13423cfe5b6
+    runtime:
+      snapshots: false
+  permissions:
+    scopes: []
+    external:
+      images:
+        - 'https://i.imgur.com/*'
+      fetch:
+        backend:
+          - 'https://api.imgur.com/*'
